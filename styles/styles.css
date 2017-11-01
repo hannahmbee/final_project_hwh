@@ -22,8 +22,8 @@
 
 .column {
 	float: left;
-	margin-right: 2%;
-	padding: 0px 30px;
+
+	padding: 0px 3%;
 }
 
 .column:last-child {
@@ -41,33 +41,6 @@
 .header {
 	text-align: center;
 	position: relative;
-}
-
-.nav li{
-	text-align: center;
-	list-style: none;
-	display: inline-block;
-}
-
-.nav ul {
-	text-align: center;
-	padding: 0;
-}
-
-
-#logo {
-	height: 350px;
-	width: 350px;
-}
-
-#logofont {
-	font-size: 60px;
-}
-
-#tagline {
-	font-family: 'Open Sans', sans-serif;
-	padding: 10px 0px 15px 0px;
-	font-size: 25px;
 }
 
 .nav {
@@ -92,6 +65,78 @@
 	color: #ffbb85;
 }
 
+.nav li{
+	text-align: left;
+	list-style: none;
+	display: inline-block;
+}
+
+.nav ul {
+	text-align: center;
+	padding: 0;
+}
+
+/* Dropdown btn */
+.dropbtn {
+	background-color: white;
+	font-family: 'Arvo', serif;
+	color: black;
+	font-size: 100%;
+    border: none;
+    cursor: pointer;
+    padding: 0px 80px;
+}
+
+/* Positioning */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hidden content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links */
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 3px 3px;
+}
+
+/* Links hover */
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Color when content shown */ 
+.dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+}
+
+#logo {
+	height: 25%;
+	width: 25%;
+}
+
+#tagline {
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px 0px 15px 0px;
+	font-size: 1.5em;
+}
+
 p {
 	font-family: 'Arvo', serif;
 	padding: 10px 0px;
@@ -104,7 +149,7 @@ aside {
 }
 
 #search input [type=text] {
-	width: 500px;
+	width: 100%;
 	-webkit-transition: width 0.4s ease-in-out;
 	transition: width 0.4s ease-in-out;
 }
@@ -114,14 +159,14 @@ aside {
 }
 
 #profile {
-	height: 200px;
-	width: 200px;
+	height: 100%;
+	width: 100%;
 	border: 1px solid grey;
 	transform: rotate(270deg);
 }
 
 #side {
-	font-size: 12px;
+	font-size: 0.75em;
 	line-height: 1.6;
 }
 
@@ -130,7 +175,7 @@ aside {
 }
 
 #icons {
-	font-size: 40px;
+	font-size: 2em;
 	padding: 10px 5px;
 }
 
@@ -146,10 +191,7 @@ aside {
 
 .title {
 	text-align: left;
-}
-
-.hide {
-	display: none;
+	margin-bottom: 2px;
 }
 
 .read-more img {
@@ -204,6 +246,7 @@ aside {
 	list-style: none;
 	float: none;
 	display: inline-block;
+	padding: 0px 30px;
 
 }
 
@@ -239,8 +282,8 @@ aside {
 }
 
 #logofoot {
-	height: 80px;
-	width: 80px;
+	height: 15%;
+	width: 15%;
 	text-align: center;
 	animation-name: spin;
 	animation-duration: 5000ms;
@@ -258,7 +301,7 @@ aside {
 }
 
 #home {
-	font-size: 40px;
+	font-size: 2em;
 	/*Unsure how to get to sit center horizontally*/
 }
 
