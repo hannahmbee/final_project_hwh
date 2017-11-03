@@ -13,15 +13,44 @@ $(document).ready(function() {
 /* User clicks image
 	<p> slides down
 	"Read Less >" is shown */
+	$('.readmore').click(function(e) {
+		e.preventDefault();
+		$('.show-this-on-click').slideDown();
+		$('.readless').show();
+	})
 
 /* User clicks "Read Less >" 
 	<p> slides up 
 	"Read Less >" is hidden */
+	$('.readless').click(function(e) {
+		e.preventDefault();
+		$('.show-this-on-click').slideUp();
+		$('.readless').hide();
+	})
 
-// Make a dropdown menu
-	/* When user clicks "Series"
-		List drops down
-		Links to each series 'homepage'
-		Disappears when user clicks out of menu*/
+//SCROLL TO TOP BUTTON
+	//Check to see if window is at top
+		//If not, display button
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 100) {
+				$('.scrollToTop').fadeIn();
+			} else {
+				$('.scrollToTop').fadeOut();
+			}
+		});
+
+		//Click to scroll to top
+		$('.scrollToTop').click(function() {
+			$('html, body').animate({scrollTop : 0},800);
+			return false;
+		});
 
 });
+
+
+
+
+
+
+
+
