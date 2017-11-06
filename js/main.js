@@ -45,6 +45,12 @@ $(document).ready(function() {
 			return false;
 		});
 
+
+//HAMBURGER MENU to be finished
+	$('.hamburger').on('click', function() {
+		$('nav').slideToggle();
+	})
+
 });
 
 

@@ -340,6 +340,18 @@ a:hover {
 	text-decoration:none;
 }
 
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 720px) {
+	.hamburger {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 920px) {
+	
+}
+
 
 
 
