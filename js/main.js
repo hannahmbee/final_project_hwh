@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 // Slick slider
-	$('.single-item').slick({
+	$('.single-item').slick( {
 		dots: true,
 		infinite: true,
 		autoplay: true,
@@ -46,10 +46,31 @@ $(document).ready(function() {
 		});
 
 
-//HAMBURGER MENU to be finished
+//HAMBURGER MENU
+	/* User clicks hamburger
+		Menu slides down */
 	$('.hamburger').on('click', function() {
 		$('nav').slideToggle();
-	})
+	});
+
+	$(window).on('resize', function() {
+		if ($(window).width() >= 768 && !$('nav').is(':visible')) {
+			$('nav').show();
+		} else if ($(window).width() < 768 && $('nav').is(':visible')) {
+			$('nav').hide();
+					
+		}
+	});
+
+//SERIES BUTTON
+/* User clicks "Series *arrow icon*"
+		Menu slides down */
+	$('.dropbtn').on('click', function() {
+		$('.dropdown-content').slideToggle();
+	});
+
+
+
 
 });
 
