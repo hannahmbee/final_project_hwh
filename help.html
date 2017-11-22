@@ -4,10 +4,11 @@
 
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="styles/reset.css">
-		<link rel="stylesheet" type="text/css" href="styles/styles.css">
 		<link rel="stylesheet" type="text/css" href="./fonts/sugarplums/sugar_plums/sugar_plums.otf">
 		<link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans:300" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="slick-1.8.0/slick/slick-theme.css">
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
 
 		<title>Help</title>
 	</head>
@@ -23,16 +24,18 @@
 		</section>
 
 		<section class="nav">
+			<i class="hamburger fa fa-bars" aria-hidden="true"></i>
+			
 			<nav class="list">
 				<a href="index.html"><li>Home</li></a>
 				<a href="about.html"><li>About</li></a>
 				<div class="dropdown">
-				  <button class="dropbtn">Series</button>
+				  <button class="dropbtn">Series <i class="arrow fa fa-angle-down"></i></button>
 				  <div class="dropdown-content">
 				    <a href="series-page.html">Confessions of a Hopeless Romantic</a>
 				    <a href="series-page2.html">Chronicles of a Curvy Girl</a>
-				    <a href="series-page-3.html">Hannah's Happenings</a>
-				    <a href="series-page-4.html">Miscellaneous</a>
+				    <a href="series-page3.html">Hannah's Happenings</a>
+				    <a href="series-page4.html">Miscellaneous</a>
 				  </div>
 				</div>
 				<a href="contact.html"><li>Contact</li></a>
@@ -42,12 +45,98 @@
 
 		<div class="two-columns has-sidebar clearfix">
 			<main class="column">
-			<p>HELP RESOURCES TO GO HERE</p>
+			<p class="help">
+				At some point, everyone needs some help and support and that can come from a variety of resources. If you feel that you can't talk to a friend, family member or responsible adult who knows you, I've listed below the contact details of some mental health charities targeted. 
+			</p>
+			<p class="help">
+				Feeling suicidal? Click <a href="http://studentsagainstdepression.org/get-support/check-suicide-and-self-harm/feeling-like-you-want-to-die/" target="_blank" title="Students Against Depression">here</a> for information on how to get help immediately
+			</p>
+
+			<h3 class="title">The Mix</h3>
+			<p>
+				I chose The Mix because they offer a wide range of services targeted specifically at young people up to the age of 25.
+			</p>
+			<p>
+				"The Mix is the UK's leading support service for young people. We are here to help you take on any challenge you're facing - from mental health to comey, from homelessness to finding a job, from break-ups to drugs. Talk to us via online, social or our free confidential helpline."
+			</p>
+			<p>
+				You can call The Mix via freephone on  0808 808 4994 
+			</p>
+			<p>
+				For more information visit their website at: <a href="http://www.themix.org.uk/" target="_blank" title="The Mix- Home Page">www.themix.org.uk</a>
+			</p>
+			<p>
+				Click <a href="http://www.themix.org.uk/get-involved/support-us" target="_blank" title="The Mix- Donate">here</a> if you want to make a donation and support The Mix.
+			</p>
+
+			<h3 class="title">YoungMinds</h3>
+			<p>
+				YoungMinds is a fantastic charity offering support and information to not only children and adolescents, but also parents. They providing mental health training on a wide range of topics. 
+			</p>
+			<p>
+				YoungMinds "champions children and young people's mental health and wellbeing across the UK. Driven by their experience we create change so that children and young people can cope with life's adversities, find help when needed and succeed in life."
+			</p>
+			<p>
+				To find out more about YoungMinds, visit them at: <a href="https://youngminds.org.uk/" target="_blank" title="YoungMinds- Home Page">youngminds.org.uk</a>
+			</p>
+
+			<p>
+				Click <a href="https://youngminds.org.uk/donate/" target="_blank" title="YoungMinds- Donate">here</a> if you want to make a donation and support YoungMinds.
+			</p>
+
+			<h3 class="title">Student Minds</h3>
+			<p>
+				Life as a university student isn't always easy,  but Student Minds is the leading student mental health chairty in the UK.
+			</p>
+			<p>
+				"Student Minds is the UK’s student mental health charity. We empower students and members of the university community to develop the knowledge, confidence and skills to look after their own mental health, support others and create change."
+			</p>
+			<p>
+				Click <a href="http://www.studentminds.org.uk/about.html" target="_blank" title="Student Minds- About">here</a> to learn more about student minds and <a href="http://www.studentminds.org.uk/student-groups.html" target="_blank" title="Student Minds- Local Groups">here</a> to see if Student Minds operates where you study.
+			</p>
+
+			<p>
+				Click <a href="http://www.studentminds.org.uk/donate.html" target="_blank" title="Student Minds- Donate">here</a> if you want to make a donation and support Student Minds.
+			</p>
+
+			<h3 class="title">Mind</h3>
+			<p>
+				Mind is a broad and far reaching charity, offering support to all ages and demographics
+			</p>
+			<p>
+				Mind "provides advice and support to empower anyone experiencing a mental health problem. We campaign to improve services, raise awareness and promote understanding."
+			</p>
+			<p>
+				<a href="https://www.mind.org.uk/information-support/helplines/" target="_blank" title="Mind- Helplines">Here</a> is the information page for the various different ways to contact and use Mind's services.
+			</p>
+			<p>
+				Click <a href="https://www.mind.org.uk/get-involved/donate-or-fundraise/donate/" target="_blank" title="Mind- Donate">here</a> if you want to make a donation and support Mind.
+			</p>
+			<div id="map-mind" class="google-map"></div>
+
+			<h3 class="title">Samaritans (Central London)</h3>
+			<p>Samaritans is a charity which is at the forefront of campaining, access and assistance. Their services are well known for confidentiality and 24 hour access.</p>
+			<p>
+				"Anyone can contact Samaritans. We offer a safe place for you to talk any time you like, in your own way, no matter how old you are. Samaritans' primary responsibility is to you, not your parents or guardian."
+			</p>
+			<p>
+				If you're under the age of 18, <a href="https://www.samaritans.org/how-we-can-help-you/what-happens-when-you-contact-us/if-youre-under-18" target="_blank" title="Samaritans- Under 18s">here</a> is information relevant to you.
+			</p>
+			<p>For more general information go to: <a href="https://www.samaritans.org/how-we-can-help-you" target="_blank" title="Samaritans- How We Can Help">"How we can help you"</a></p>
+			<div id="map-samaritans" class="google-map"></div>
+			<h3 class="title"></h3>
+
+			<p class="help">
+				I've added the link to each charity's monetary donation page. Please bear in mind this is not the only way to support charity! There are volunteering opportunities and fun fundraising events to take part of too so don't feel that I'm saying the only way to support charities is through financial donations.
+			</p>
+
 			</main>
 
 			<aside class="column">
 				
-				<img id="profile" src="photos/IMG_2784 1 copy.JPG" alt="Photo of me">
+				<div id="profile">
+					<img class="profilepic" src="photos/profile.png" alt="Photo of me">
+				</div>
 
 				<div id="search">
 					<input type="text" name="search" placeholder="Search...">
@@ -62,27 +151,29 @@
 					A safe place for those who need help. Real lie advice from an honest and down to earth source. There's always a helping hand from Help With Hannah.
 				</p>
 
+				<img class="upcoming" src="photos/Copy of Upcoming Posts.png" alt="upcoming posts">
+
 			</aside>
 		</div>
 
 		<section class="footer">
 			<div class="container">
-				<ul class="clearfix">
-					<li class="block">
-						<a id="commsugg" href="#">Comments/Suggestions</a>
-					</li>
-					<li class="block">
+					<div class="button-footer">
 						<img id="logofoot" src="photos/Hannah.png" alt="logo">
-					</li>
-					<li class="block">
+					</div>
+					<div class="button-footer">
 						<a href="#" class="scrollToTop">Scroll To Top</a>
-					</li>
-				</ul>
+					</div>
 			</div>
 		</section>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+		<script src="slick-1.8.0/slick/slick.min.js"></script>
+		
 		<script src="./js/main.js"></script>
+		<script async defer
+				    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArBkKufPNhcQmfEoaKhMQ1utjlJYpk1Kc&callback=initMap">
+				    </script>	
 
 	</body>
 </html>

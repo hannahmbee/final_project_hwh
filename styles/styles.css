@@ -27,6 +27,14 @@
 /******************************************
 /* PAGE BOILER PLATE
 /*******************************************/
+html {
+	font-size: 16px;
+}	
+aside {
+	display: none;
+}
+
+
 .header {
 	text-align: center;
 	position: relative;
@@ -40,7 +48,7 @@
 #tagline {
 	font-family: 'Open Sans', sans-serif;
 	padding: 3px 70px;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 img {
@@ -52,8 +60,13 @@ img {
 
 p {
 	font-family: 'Arvo', serif;
-	padding: 10px 10px;
+	padding: 10px 25px;
 	line-height: 1.5;
+	text-align: justify;
+}
+
+span {
+	text-align: center;
 }
 
 a {
@@ -61,11 +74,13 @@ a {
 	color: black;
 }
 
+
 /******************************************
 /* NAV BAR
 /*******************************************/
 .hamburger {
 	padding: 2px 6px;
+	font-size: 1.75rem;
 }
 /* How do you get the nav bar to start hidden
 in the hamburger, 
@@ -73,10 +88,11 @@ instead of showing? Is that a JS thing?*/
 .nav {
 	text-align: left;
 	font-family: 'Arvo', serif;
-	padding: 5px 0px;
+	padding: 5px 25px;
 	margin-bottom: 10px;
 	border-top: 1px solid #999;
 	border-bottom: 1px solid #999;
+	font-size: 1.2rem;
 }
 
 .nav a {
@@ -146,11 +162,47 @@ instead of showing? Is that a JS thing?*/
 .title {
 	text-align: left;
 	margin-bottom: 3px;
-	font-size: 1em;
+	font-size: 1.1rem;
 	font-family: 'Open Sans', sans-serif;
-	background-color: #92819f;
-	color: white;
-	padding: 5px;
+	color: black;
+	border-top: 3px solid #92819f;
+	border-bottom: 3px solid #92819f;
+	padding: 5px 5px 5px 25px;
+}
+
+.month {
+	font-family: 'Sugar Plum', sans-serif;
+	font-size: 1.25rem;
+	transition: color 0.1s ease;
+}
+
+a {
+	transition: color 0.1s ease;
+}
+
+.month:hover {
+	color: #ff9390;
+}
+
+.readmorebtn {
+	font-family: 'Open Sans', serif;
+	text-align: center;
+	border: 1px solid #F5F5F5;
+	max-width: 94%;
+	margin: 0 auto 10px;
+	transition: background-color 0.3s ease;
+	transition: color 0.1s ease;
+	padding: 10px;
+	display: block;
+}
+
+.readmorebtn:hover {
+	background-color: #F5F5F5;
+	border: 1px solid #F5F5F5;
+}
+
+.show-this-on-click {
+	display: none;
 }
 
 /******************************************
@@ -160,6 +212,61 @@ instead of showing? Is that a JS thing?*/
 .blog-header {
 	text-align: center;
 }
+
+/******************************************
+/* BLOG PAGE STYLES
+/*******************************************/
+.iconsbtm p {
+	text-align: center;
+}
+
+.fa-home, .fa-arrow-left, .fa-arrow-right {
+	font-size: 1.75rem;
+	padding: 10px 30px;
+}
+
+
+
+/******************************************
+/* ABOUT / CONTACT / HELP PAGE STYLES
+/*******************************************/
+
+.hide {
+	display: none;
+}
+
+fieldset, label, span, textarea {
+	font-family: 'Open Sans', sans-serif;
+}
+
+fieldset, label, span {
+	text-align: center;
+}
+
+label {
+	padding: 0px 10px;
+	font-size: 1.2rem;
+}
+
+legend {
+	padding: 0px 10px;
+}
+
+fieldset {
+	border: 3px solid #92819f;
+	margin: 20px;
+}
+
+.google-map {
+	width: 60%;
+	height: 200px;
+	margin: 20px 50px;
+}
+
+.help {
+	padding: 3% 20%;
+}
+
 
 /******************************************
 /* FOOTER
@@ -199,27 +306,31 @@ instead of showing? Is that a JS thing?*/
 	color: black;
 	text-decoration: none;
 	background-color: #ffd77a;
+	font-size: 1.2rem;
 
 }
-	
 
 
-
-
-	
 
 /******************************************
 /* MEDIA QUERIES
 /*******************************************/
 
 @media screen and (min-width: 600px) {
+	/*LARGE PHONE OR TABLET*/
 	#logo {
 		width: 300px;
 		height: 290px;
 	}
+
 }
 
 @media screen and (min-width: 768px) {
+	/*IPAD*/
+	a:hover {
+		color: #ff9390;
+	}
+
 	/*PAGE LAYOUT*/
 	.column {
 		float: left;
@@ -238,22 +349,79 @@ instead of showing? Is that a JS thing?*/
 		width: 27%;
 	}
 
+	/*SIDE BAR*/
+
+	aside {
+		display: block;
+	}
+
 	#logo {
 		height: 25%;
 		width: 25%;
 	}
 
+	#search {
+		text-align: center;
+	}
+
+	#profile {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.profilepic {
+		border-radius: 360px;
+	}
+
+	#icons {
+		font-size: 1.75rem;
+		text-align: center;
+		margin: 10px;
+	}
+
+	.fa-facebook-square, .fa-instagram, .fa-twitter-square {
+		padding: 10px;
+		display: inline-block;
+		transition: color 0.2s ease;
+	}
+
+	.fa-facebook-square:hover {
+		color: #ff9390;
+	}
+
+	.fa-instagram:hover {
+		color: #ff9390;
+	}
+
+	.fa-twitter-square:hover {
+		color: #ff9390;
+	}
+
+	.upcoming {
+		margin: 5% 5%;
+		width: 90%;
+		height: auto;
+	}
+
+
 	/*NAV*/      
 	/* Doesn't fall back into a straight line? */
+
 	.nav {
 		text-align: center;
 		font-family: 'Arvo', serif;
 		padding: 5px 0px;
 		margin-bottom: 10px;
+		font-size: 1rem;
 	}
 
 	.nav a {
 		padding: 0px 80px;
+		transition: color 0.1s ease;
+	}
+
+	.nav a:hover {
+		color: #ff9390;
 	}
 
 	.nav li {
@@ -262,10 +430,16 @@ instead of showing? Is that a JS thing?*/
 
 	.dropbtn {
 		padding: 0px 80px;
+		transition: color 0.1s ease;
+	}
+
+	.dropbtn:hover {
+		color: #ff9390;
 	}
 
 	.dropdown-content {
 		min-width: 160px;
+		transition: color 0.1s ease;
 	}
 
 	.dropdown-content a:hover {
@@ -274,10 +448,6 @@ instead of showing? Is that a JS thing?*/
 
 	.dopdown:hover .dropdown-content {
 		display: block;
-	}
-
-	.dropdown:hover .dropbtn {
-		background-color: #f1f1f1;
 	}
 
 	.hamburger {
@@ -296,6 +466,19 @@ instead of showing? Is that a JS thing?*/
 		height: 80%;
 	}
 
+	.google-map {
+		width: 40%;
+		height: 200px;
+	}
+
+
+@media screen and (min-width: 1024px) {
+	/*DESKTOP*/
+}
+	.slide {
+		max-width: 50%;
+
+	}
 
 }
 

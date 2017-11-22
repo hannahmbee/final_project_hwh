@@ -1,3 +1,30 @@
+//GOOGLE MAPS
+	
+function initMap() {
+
+    var mindLocation = {lat: 51.468543, lng: -0.113233};
+    var map = new google.maps.Map(document.getElementById('map-mind'), {
+      zoom: 15,
+      center: mindLocation
+    });
+    var marker = new google.maps.Marker({
+      position: mindLocation,
+      map: map
+    });
+
+    var location = {lat: 51.5128, lng: -0.137835};
+    var map = new google.maps.Map(document.getElementById('map-samaritans'), {
+      zoom: 15,
+      center: location
+    });
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map
+    });
+  }
+
+
+
 $(document).ready(function() {
 
 // Slick slider
@@ -5,28 +32,19 @@ $(document).ready(function() {
 		dots: true,
 		infinite: true,
 		autoplay: true,
-		autoplaySpeed: 3000
+		autoplaySpeed: 3000,
+		arrows: false
 	});
 
-// INDEX.HTML: Might change this to have the preview ontop of the image with hover
 // Somehow use 'this'... 
 /* User clicks image
-	<p> slides down
-	"Read Less >" is shown */
-	$('.readmore').click(function(e) {
-		e.preventDefault();
-		$('.show-this-on-click').slideDown();
-		$('.readless').show();
-	})
+	<p> slides down */
 
-/* User clicks "Read Less >" 
-	<p> slides up 
-	"Read Less >" is hidden */
-	$('.readless').click(function(e) {
+	$('.readmore').on('click', function(e) {
 		e.preventDefault();
-		$('.show-this-on-click').slideUp();
-		$('.readless').hide();
-	})
+		$('.show-this-on-click').slideToggle();
+		//Whenever 'this' is used, slick breaks
+	});
 
 //SCROLL TO TOP BUTTON
 	//Check to see if window is at top
@@ -52,7 +70,8 @@ $(document).ready(function() {
 	$('.hamburger').on('click', function() {
 		$('nav').slideToggle();
 	});
-
+//If window is over 768px nav is shown
+//If window is below 768px nav is hidden
 	$(window).on('resize', function() {
 		if ($(window).width() >= 768 && !$('nav').is(':visible')) {
 			$('nav').show();
@@ -69,8 +88,19 @@ $(document).ready(function() {
 		$('.dropdown-content').slideToggle();
 	});
 
+// On [name="suggest"] change
+	// get the value from $(this)
+	//Remove class ".hidden" from text area
+	$("[name=entry.519560185]").on('change', function() {
+		var selection = $(this).val();
 
-
+		if (selection === 'yes') {
+			$('[name="entry.2123424413"]').removeClass('hide');
+		} else {
+			$('[name="entry.2123424413"]').addClass('hide');
+		}
+		//Since adding Google Forms this addClass and removeClass no longer works
+	});
 
 });
 
