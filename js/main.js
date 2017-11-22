@@ -90,7 +90,7 @@ $(document).ready(function() {
 // On [name="suggest"] change
 	// get the value from $(this)
 	//Remove class ".hidden" from text area
-	$("[name=entry.519560185]").on('change', function() {
+	$('[name="entry.519560185"]').on('change', function() {
 		var selection = $(this).val();
 
 		if (selection === 'yes') {
