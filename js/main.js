@@ -42,8 +42,7 @@ $(document).ready(function() {
 
 	$('.readmore').on('click', function(e) {
 		e.preventDefault();
-		$('.show-this-on-click').slideToggle();
-		//Whenever 'this' is used, slick breaks
+		$(this).next('.show-this-on-click').slideToggle();
 	});
 
 //SCROLL TO TOP BUTTON
